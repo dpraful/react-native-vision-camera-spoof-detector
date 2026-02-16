@@ -1,0 +1,131 @@
+buildscript {
+    ext {
+        kotlinVersion = rootProject.ext.has('kotlinVersion') ? rootProject.ext.kotlinVersion : '1.9.0'
+        minSdkVersion = rootProject.ext.has('minSdkVersion') ? rootProject.ext.minSdkVersion : 21
+        compileSdkVersion = rootProject.ext.has('compileSdkVersion') ? rootProject.ext.compileSdkVersion : 33
+        targetSdkVersion = rootProject.ext.has('targetSdkVersion') ? rootProject.ext.targetSdkVersion : 33
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.1.0")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        buildConfigField "String", "MODEL_FILE", "\"FaceAntiSpoofing.tflite\""
+        buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
+
+        // Needed for JSI / C++ build
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++17"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    sourceSets {
+        main {
+            assets.srcDirs = ['src/main/assets']
+        }
+    }
+
+    aaptOptions {
+        noCompress "tflite"
+    }
+
+    packagingOptions {
+        resources.excludes.addAll([
+            'META-INF/DEPENDENCIES',
+            'META-INF/LICENSE',
+            'META-INF/LICENSE.txt',
+            'META-INF/NOTICE',
+            'META-INF/NOTICE.txt',
+            'META-INF/AL2.0',
+            'META-INF/LGPL2.1'
+        ])
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+            version "3.22.1"  // Optional: matches your installed CMake
+        }
+    }
+}
+
+def isNewArchitectureEnabled() {
+    return rootProject.hasProperty("newArchEnabled") && rootProject.newArchEnabled == "true"
+}
+
+repositories {
+    google()
+    mavenCentral()
+    maven { url "$projectDir/../node_modules/react-native/android" }
+    maven { url "https://dl.google.com/dl/android/maven2" }
+}
+
+dependencies {
+    // React Native
+    implementation "com.facebook.react:react-native:+"
+
+    // Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+
+    // TensorFlow Lite (includes NNAPI support built-in)
+    implementation "org.tensorflow:tensorflow-lite:2.11.0"
+    implementation "org.tensorflow:tensorflow-lite-support:0.4.4"
+    
+    // GPU Delegate for TensorFlow Lite
+    implementation "org.tensorflow:tensorflow-lite-gpu:2.11.0"
+    implementation "org.tensorflow:tensorflow-lite-gpu-api:2.11.0"
+
+    // Kotlin Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3"
+
+    // AndroidX - EXIF Support for image orientation
+    implementation "androidx.exifinterface:exifinterface:1.3.6"
+
+    // Vision Camera + Worklets
+    implementation project(':react-native-vision-camera')
+    implementation project(':react-native-worklets-core')
+
+    // Optional: Face Detector if needed
+    implementation project(':react-native-vision-camera-face-detector')
+}

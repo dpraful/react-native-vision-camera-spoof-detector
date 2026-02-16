@@ -1,0 +1,72 @@
+{
+  "name": "react-native-vision-camera-spoof-detector",
+  "version": "1.0.17",
+  "description": "High-performance face anti-spoofing and liveness detection module for React Native Vision Camera. Uses TensorFlow Lite with GPU acceleration and optimized YUV processing.",
+  "homepage": "https://github.com/jescon-tech/react-native-vision-camera-spoof-detector",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jescon-tech/react-native-vision-camera-spoof-detector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jescon-tech/react-native-vision-camera-spoof-detector/issues"
+  },
+  "license": "JESCON TECHNOLOGIES PVT LTD",
+  "author": {
+    "name": "PRAFULDAS M M",
+    "company": "JESCON TECHNOLOGIES PVT LTD THRISSUR, KERALA, INDIA",
+    "email": "jescontechnologies@gmail.com"
+  },
+  "main": "index.js",
+  "browser": "index.js",
+  "react-native": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "android/",
+    "ios/",
+    "index.js",
+    "index.d.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint .",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "react-native",
+    "vision-camera",
+    "face-detection",
+    "anti-spoofing",
+    "liveness-detection",
+    "face-liveness",
+    "spoofing-detection",
+    "tensorflow-lite",
+    "gpu-acceleration",
+    "yuv-processing"
+  ],
+  "peerDependencies": {
+    "react-native": ">=0.60.0",
+    "react-native-vision-camera": "^4.6.4 || ^5.0.0",
+    "react-native-reanimated": "^3.0.0",
+    "react-native-worklets-core": "^1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react-native-vision-camera-face-detector": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "react-native": "^0.72.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6",
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0"
+  },
+  "dependencies": {
+    "react-native-geolocation-service": "^5.3.1"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "packageManager": "npm@8.0.0",
+  "documentation": "https://github.com/jescon-tech/react-native-vision-camera-spoof-detector/wiki"
+}
