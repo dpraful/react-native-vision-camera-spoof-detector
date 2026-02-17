@@ -1,0 +1,14 @@
+# Exclude development and configuration files
+.git
+.github
+.gitignore
+.npmignore
+.eslintrc.js
+.prettierrc.js
+tsconfig.json
+__tests__
+examples
+android/build
+android/.gradle
+implementation_plan.md
+task.md
