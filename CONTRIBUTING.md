@@ -250,7 +250,7 @@ When choosing what to work on:
 
 ## License
 
-By contributing, you agree that your contributions will be licensed under its MIT License.
+By contributing, you agree that your contributions will be licensed under its JESCON TECHNOLOGIES PVT LTD License.
 
 ## Recognition
 

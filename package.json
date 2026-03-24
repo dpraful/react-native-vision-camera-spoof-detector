@@ -1,6 +1,6 @@
 {
   "name": "react-native-vision-camera-spoof-detector",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "High-performance face anti-spoofing and liveness detection module for React Native Vision Camera. Uses TensorFlow Lite with GPU acceleration and optimized YUV processing.",
   "homepage": "https://github.com/jescon-tech/react-native-vision-camera-spoof-detector",
   "repository": {

@@ -140,7 +140,7 @@ Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for details on:
 
 ## License
 
-MIT License - See [LICENSE](./LICENSE) file for details
+JESCON TECHNOLOGIES PVT LTD License - See [LICENSE](./LICENSE) file for details
 
 ---
 
