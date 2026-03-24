@@ -1,14 +1,14 @@
 {
   "name": "react-native-vision-camera-spoof-detector",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "High-performance face anti-spoofing and liveness detection module for React Native Vision Camera. Uses TensorFlow Lite with GPU acceleration and optimized YUV processing.",
-  "homepage": "https://github.com/jescon-tech/react-native-vision-camera-spoof-detector",
+  "homepage": "https://github.com/dpraful/react-native-vision-camera-spoof-detector",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jescon-tech/react-native-vision-camera-spoof-detector.git"
+    "url": "https://github.com/dpraful/react-native-vision-camera-spoof-detector.git"
   },
   "bugs": {
-    "url": "https://github.com/jescon-tech/react-native-vision-camera-spoof-detector/issues"
+    "url": "https://github.com/dpraful/react-native-vision-camera-spoof-detector/issues"
   },
   "license": "JSCON TECHNOLOGIES PVT LTD",
   "author": {
@@ -28,6 +28,8 @@
   "types": "index.d.ts",
   "files": [
     "android/",
+    ".gitattributes",
+    ".gitignore",
     ".npmignore",
     "CHANGELOG.md",
     "CONTRIBUTING.md",
@@ -77,7 +79,7 @@
     "npm": ">=8.0.0"
   },
   "packageManager": "npm@8.0.0",
-  "documentation": "https://github.com/jescon-tech/react-native-vision-camera-spoof-detector/wiki",
+  "documentation": "https://github.com/dpraful/react-native-vision-camera-spoof-detector/wiki",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"

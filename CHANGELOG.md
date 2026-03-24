@@ -127,8 +127,8 @@ None planned for the 1.0.x series.
 
 ## Support & Issues
 
-- Report bugs: [GitHub Issues](https://github.com/jescon-tech/react-native-vision-camera-spoof-detector/issues)
-- Feature requests: [GitHub Discussions](https://github.com/jescon-tech/react-native-vision-camera-spoof-detector/discussions)
+- Report bugs: [GitHub Issues](https://github.com/dpraful/react-native-vision-camera-spoof-detector/issues)
+- Feature requests: [GitHub Discussions](https://github.com/dpraful/react-native-vision-camera-spoof-detector/discussions)
 
 ## Contributing
 

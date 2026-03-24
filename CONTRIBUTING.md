@@ -263,8 +263,8 @@ Contributors will be recognized in:
 ## Questions?
 
 - 📧 Email: jescontechnologies@gmail.com
-- 💬 [GitHub Issues](https://github.com/jescon-tech/react-native-vision-camera-spoof-detector/issues)
-- 📝 [GitHub Discussions](https://github.com/jescon-tech/react-native-vision-camera-spoof-detector/discussions)
+- 💬 [GitHub Issues](https://github.com/dpraful/react-native-vision-camera-spoof-detector/issues)
+- 📝 [GitHub Discussions](https://github.com/dpraful/react-native-vision-camera-spoof-detector/discussions)
 
 ## Additional Resources
 

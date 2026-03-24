@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/react-native-vision-camera-spoof-detector.svg)](https://badge.fury.io/js/react-native-vision-camera-spoof-detector)
 [![License: JESCON TECHNOLOGIES PVT LTD](https://img.shields.io/badge/License-JESCON TECHNOLOGIES PVT LTD-yellow.svg)](https://opensource.org/licenses/JESCON TECHNOLOGIES PVT LTD)
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/jescon-tech/react-native-vision-camera-spoof-detector)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/dpraful/react-native-vision-camera-spoof-detector)
 
 High-performance face anti-spoofing and liveness detection module for React Native Vision Camera. Features TensorFlow Lite with GPU acceleration, optimized YUV processing, and real-time blink detection for robust liveness verification.
 
@@ -421,14 +421,14 @@ JESCON TECHNOLOGIES PVT LTD License - see [LICENSE](./LICENSE) file for details.
 ## 🔗 Quick Links
 
 - [NPM Package](https://www.npmjs.com/package/react-native-vision-camera-spoof-detector)
-- [GitHub Repository](https://github.com/jescon-tech/react-native-vision-camera-spoof-detector)
+- [GitHub Repository](https://github.com/dpraful/react-native-vision-camera-spoof-detector)
 - [React Native Vision Camera](https://react-native-vision-camera.com)
 - [TensorFlow Lite](https://www.tensorflow.org/lite)
 
 ## 📞 Support & Community
 
-- 🐛 [Report Issues](https://github.com/jescon-tech/react-native-vision-camera-spoof-detector/issues)
-- 💬 [GitHub Discussions](https://github.com/jescon-tech/react-native-vision-camera-spoof-detector/discussions)
+- 🐛 [Report Issues](https://github.com/dpraful/react-native-vision-camera-spoof-detector/issues)
+- 💬 [GitHub Discussions](https://github.com/dpraful/react-native-vision-camera-spoof-detector/discussions)
 - 📧 Email: jescontechnologies@gmail.com
 
 ## 🙏 Acknowledgments
