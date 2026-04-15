@@ -176,6 +176,13 @@ add_library( ${ly_lib_static} STATIC ${ly_lib_parts})
 add_library( ${ly_lib_shared} SHARED ${ly_lib_parts})
 set_target_properties( ${ly_lib_shared} PROPERTIES OUTPUT_NAME "${ly_lib_name}" )
 set_target_properties( ${ly_lib_shared} PROPERTIES PREFIX "lib" )
+
+# 支持 Android 15+ 的 16KB 页面大小
+# https://developer.android.com/guide/practices/page-sizes
+if(ANDROID)
+    target_link_options(${ly_lib_shared} PRIVATE "-Wl,-z,max-page-size=16384")
+endif()
+
 if(WIN32)
   set_target_properties( ${ly_lib_shared} PROPERTIES IMPORT_PREFIX "lib" )
 endif()
