@@ -81,6 +81,14 @@ android {
         ])
     }
 
+    // 支持 Android 15+ 的 16KB 页面大小
+    // https://developer.android.com/guide/practices/page-sizes
+    packagingOptions {
+        jniLibs {
+            useLegacyPackaging false
+        }
+    }
+
     externalNativeBuild {
         cmake {
             path "src/main/cpp/CMakeLists.txt"
@@ -108,12 +116,12 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
 
     // TensorFlow Lite (includes NNAPI support built-in)
-    implementation "org.tensorflow:tensorflow-lite:2.11.0"
-    implementation "org.tensorflow:tensorflow-lite-support:0.4.4"
+    implementation "org.tensorflow:tensorflow-lite:2.17.0"
+    implementation "org.tensorflow:tensorflow-lite-support:0.5.0"
     
     // GPU Delegate for TensorFlow Lite
-    implementation "org.tensorflow:tensorflow-lite-gpu:2.11.0"
-    implementation "org.tensorflow:tensorflow-lite-gpu-api:2.11.0"
+    implementation "org.tensorflow:tensorflow-lite-gpu:2.17.0"
+    implementation "org.tensorflow:tensorflow-lite-gpu-api:2.17.0"
 
     // Kotlin Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3"

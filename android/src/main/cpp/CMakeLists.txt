@@ -43,6 +43,10 @@ if (EXISTS ${CMAKE_SOURCE_DIR}/libyuv/CMakeLists.txt)
     endif()
 endif()
 
+# 支持 Android 15+ 的 16KB 页面大小
+# https://developer.android.com/guide/practices/page-sizes
+target_link_options(fastyuv PRIVATE "-Wl,-z,max-page-size=16384")
+
 # Android log
 find_library(log-lib log)
 target_link_libraries(fastyuv PRIVATE ${log-lib})
@@ -82,6 +86,9 @@ target_include_directories(faceantispoof PRIVATE
 )
 
 find_library(log-lib log)
+
+# 支持 Android 15+ 的 16KB 页面大小
+target_link_options(faceantispoof PRIVATE "-Wl,-z,max-page-size=16384")
 
 target_link_libraries(
     faceantispoof
